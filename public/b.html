@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin-left: auto;
+            margin-top: 64px;
+            margin-right: auto;
+        }
+        input{
+            margin: 4px;
+        }
+        #form_login_div {
+            display: block;
+        }
+
+        #form_register_div {
+            display: none;
+        }
+    </style>
+    <script src="./a.js"></script>
+</head>
+
+<body><center>
+    <div id="form_login_div">
+        <form action="http://localhost:3000/login" method="GET">
+            帐号: <input type="text" name="account"> <br>
+            密码: <input type="text" name="password"> <br>
+            <input type="submit" value="登录">
+            </button>
+        </form >
+        <input type='button' onclick="TurnToLogin()" value='登陆' />&nbsp;&nbsp;&nbsp;
+        <input type='button' onclick="TurnToRegister()" value='注册' /><br />
+    </div>
+    <div id="form_register_div">
+        <form action="http://localhost:3000/process_get" method="GET">
+            帐号: <input type="text" name="account"> <br>
+            密码: <input type="text" name="password"><br>
+            <input type="submit" value="Submit"><br>
+            <input type='button' onclick="TurnToLogin()" value='登陆' />&nbsp;&nbsp;&nbsp;
+            <input type='button' onclick="TurnToRegister()" value='注册' /><br />
+    </div>
+</center>
+</body>
+
+</html>
